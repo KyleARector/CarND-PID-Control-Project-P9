@@ -19,6 +19,11 @@ The integral portion of the controller allows compensation for any abnormalities
 
 The P, I, and D parameters for this project were tuned manually by changing them one at a time and observing the impact on the car's performance in the simulator. Ultimately, the values were evaluated based on how much oscillation they introduced to the drive, as well as how the car handled corners, which are expected deviations from a previously linear ground truth. To be a good model, the car must not oscillate too frequently on straight track portions, but must also respond quickly to corners and not drive off the track.
 
+The coefficient values I obtained from manual tuning were:
+- P: 0.07
+- I: 0.004
+- D: 0.5
+
 ### Future Work
 
 This model could be updated in numerous ways. Per a suggestion in the main file, the speed could be controlled by a PID controller, rather than being held constant. In this way, the throttle could also change relative to the distance from ground truth, and appropriate parameters could be established to ensure that the vehicle does not proceed too quickly around corners, and takes advantages of straight track segments when it is easier to remain closer to ground truth.
